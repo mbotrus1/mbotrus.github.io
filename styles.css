@@ -1,0 +1,54 @@
+
+title {
+	font-size: 48px;
+}
+
+body {
+  
+  background-color: indigo;
+  background-image: url("indigo.jpg");	
+  color: lightsalmon;
+}
+h1 {
+  color: blue;
+  background-image: url("banana.gif");	
+  font-size: 112px;
+}
+
+h2 {
+	color: red;
+}
+
+
+h3 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p {
+ 
+  color: pink;
+}
+
+a {
+  color: white;
+}
+
+figure {
+	text-align: center;
+	font-size: 24px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: black;
+}
