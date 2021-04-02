@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments Classwork 06 </title>
+
+    <script>
+        function changeBodyBg()
+		{
+			document.body.style.backgroundColor = back_color;
+			document.body.style.color = text_color;
+         }
+     </script>
+	 
+</head>
+<body>
+<h1>Exercise 1</h1>
+<p id="P1"></p>
+
+
+    <script>
+        function fib(my_var)
+		{
+            if(my_var == 0)
+			{
+				document.write("0");
+				return;
+			}
+			if(my_var ==1)
+			{
+				document.write("0,1,1");
+				return;
+			}
+			else
+			{
+				document.write("0,1");
+				var n = my_var;
+				var a = 0;
+				var b = 1;
+				var c = 1;
+				while(n > 1)
+				{
+					document.write(",");
+				
+					c = a+b;
+					a = b;
+					b = c; 
+					document.write(c);
+					n--;
+				}
+			}
+			
+        }
+        document.getElementById("P1").innerHTML = "The Fibonacci is "  + fib(9);
+
+    </script>
+
+
+<hr>
+<h1>Exercise 2</h1>
+<p id="P2"></p>
+<script>
+
+    for($ii = 1; $ii <= 5; $ii++) 
+	{
+		/* Prints one row of triangle */
+		for($jj = 1; $jj <= $ii; $jj++) 
+		{
+			document.write('*');
+		}
+	    document.write('<br />');
+    }
+    
+
+</script>
+
+<hr>
+
+<h1>Exercise 3</h1>
+<p id="P3"></p>
+
+<script>
+
+var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+arr1.sort();
+document.getElementById("P3").innerHTML = arr1;
+
+</script>
+<hr>
+    
+
+<h1>Exercise 4</h1>
+<p id="P4"></p>
+<script>
+var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+var item;
+var most = 1;
+var count = 0;
+
+for (var ii=0; ii<arr1.length; ii++)
+{
+        for (var jj=ii; jj<arr1.length; jj++)
+        {
+                if (arr1[ii] == arr1[jj])
+                 count++;
+                if (most<count)
+                {
+                  most=count; 
+                  item = arr1[ii];
+                }
+        }
+        count=0;
+}
+document.write(item+" ( " + most + " times ) ") ;
+
+
+</script>
+    
+<hr>
+<h1>Exercise 5</h1>
+<p id="P5"></p>
+    
+<script>
+function shuffle(array) 
+{
+    var check = array.length, temp, index;
+    while (check > 0) 
+	{
+        index = Math.floor(Math.random() * check);
+        check--;
+        temp = array[check];
+        array[check] = array[index];
+        array[index] = temp;
+    }
+    return array;
+}
+
+var testArray = [0, 1, 2, 3, 4, 5];
+document.getElementById("P5").innerHTML = shuffle(testArray);
+
+
+</script>
+
+<hr>
+<H1>Exercise 6</H1>
+<p id="P6"></p>
+<script>
+     var back_color = prompt("Please enter a desired background color");
+     var text_color = prompt("Please enter a desired text color");
+     document.body.style.backgroundColor = changeBodyBg();
+     document.getElementById("P6").innerHTML = "The background color is " + back_color + " and the text color is now " +
+     text_color;
+</script>
+
+  <hr>
+
+    
+</body>
+</html>
