@@ -1,0 +1,29 @@
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+
+}
+
+input#my_id
+{
+margin-left: 58.5px;
+} 
+
+input#firstname{
+    margin-left: 8px;
+    } 
+
+input#lastname{
+    margin-left: 8px;
+    } 
+
+.error{
+    color: red;
+    text-decoration: underline;
+    padding-left: 80px;
+}
+
+p{
+    font-size: 10pt;
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Form</title>
+    <link rel="stylesheet" href="my_style.css">
+</head>
+
+<body>
+
+    <form name="basicForm" action="#" method="POST">
+        <p class ="error" id="lid"></p>
+        <label class="title">ID:</label>
+        <input type="text" id="my_id">
+        <br>
+
+        <p class ="error" id="my_first_name"></p>
+        <label class="title">FirstName:</label>
+        <input type="text" id="first_name">
+        <br>
+
+        <p class ="error" id="my_last_name"></p>
+        <label class="title">LastName:</label>
+        <input type="text" id="last_name">
+        <br>
+
+        <input type="button" value="Add" onclick="validate()"/>
+        <br><br>
+
+        <p id="p"></p>
+    </form>
+
+<script>
+function validate()
+{
+	// field variables for form entry 
+	var err= false;
+	var id=document.getElementById("my_id").value;
+	var firstName=document.getElementById("first_name").value;
+	var lastName=document.getElementById("last_name").value;
+	var errMessage="";
+
+	if(""==id) 
+	{
+		document.getElementById("lid").innerHTML="Please Enter an ID";
+		errMessage+="ID";
+		err=true;
+	}
+
+	if(""==firstName)
+	{
+		document.getElementById("my_first_name").innerHTML="Please Enter a First Name";
+		
+		if(err==true)
+		{
+			errMessage+=", FirstName";
+		}
+		else
+		{
+			errMessage+=" FirstName";
+		}		
+		err=true;
+	}
+
+	if(""==lastName)
+	{
+		document.getElementById("my_last_name").innerHTML="Please Enter a Last Name";
+		if(err==true)
+		{
+			errMessage+=", LastName ";
+		}
+		else
+		{
+			errMessage+=" LastName ";
+		}	
+		err=true;
+	}
+
+	if(err)
+	{
+		alert("You forgot to fill the following field(s) "+errMessage);
+	}
+
+	else
+	{ 
+		//alert("Else statement ran")
+		document.getElementById("p").innerHTML= "ID: " + id + "<br/> First Name: " + firstName + "<br/> Last Name: " + lastName;
+	}
+
+}
+
+</script>
+
+</body>
+
+</html>
