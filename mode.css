@@ -1,0 +1,14 @@
+div#board{
+	width: 860px;
+	height: 572px;
+}
+
+div#board > div{
+	border: .1px solid;
+	float: left;
+}
+
+div {
+	width: 100px;
+	height: 100px;
+}

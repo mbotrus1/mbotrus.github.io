@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Memory Game</title>
+    <link href="mode.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>The Memory Game</h1>
+    <p>Choose the number of tiles and the difficulty level. Match all your images within the time to win.</p>
+	
+	<input type="radio" id="numPics8" name="numPics" value="8" onclick='radioCheck()'> 8 Pictures <br>
+	<input type="radio" id="numPics10" name="numPics" value="10" onclick='radioCheck()'> 10 Pictures<br>
+    <input type="radio" id="numPics12" name="numPics" value="12" onclick='radioCheck()'> 12 Pictures<br>
+    
+	<button id="hardButton" onclick='game_Mode(3000)'>Hard</button>
+	<button id="mediumButton" onclick='game_Mode(5000)'>Medium</button>
+    <button id="easyButton" onclick='game_Mode(8000)'>Easy</button>
+    
+    <h2 id="timer"></h2>
+    <div id="board"></div>
+    <script src='page_two.js'></script>
+</body>
+</html>
